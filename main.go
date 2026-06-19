@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"math"
+	"runtime"
+	"time"
 )
 
 var num, num2, num3 int = 10, 20, 30
@@ -52,4 +54,38 @@ func main() {
 	x := 4.0
 	fmt.Println("Yours: ", Sqrt(x))
 	fmt.Println("math.sqrt: ", math.Sqrt(x))
+
+	//switch
+	fmt.Print("Go run on ")
+	switch os := runtime.GOOS; os {
+	case "windows":
+		fmt.Println("OS X.")
+	case "linux":
+		fmt.Println("Linux")
+	default:
+		fmt.Printf("%s. \n", os)
+	}
+
+	fmt.Println("When's Saturday?")
+	today := time.Now().Weekday()
+	switch time.Sunday {
+	case today + 0:
+		fmt.Println("Today.")
+	case today + 1:
+		fmt.Println("Tomorrow.")
+	case today + 2:
+		fmt.Println("In two days.")
+	default:
+		fmt.Println("Too far away.")
+	}
+
+	t := time.Now()
+	switch {
+	case t.Hour() < 12:
+		fmt.Println("Good Morning!")
+	case t.Hour() < 17:
+		fmt.Println("Good Afternoon!")
+	default:
+		fmt.Println("Good Evening!")
+	}
 }
