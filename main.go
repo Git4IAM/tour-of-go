@@ -19,6 +19,14 @@ func pow(x, n, lim float64) float64 {
 	return lim
 }
 
+func Sqrt(x float64) float64 {
+	z := 1.0
+	for i := 0; i < 10; i++ {
+		z -= (z*z - x) / (2 * z)
+	}
+	return z
+}
+
 func main() {
 	/*myvar1 := 39
 	myvar2 := "GeeksforGeeks"
@@ -40,4 +48,8 @@ func main() {
 		pow(3, 2, 10),
 		pow(3, 2, 10),
 	)
+
+	x := 4.0
+	fmt.Println("Yours: ", Sqrt(x))
+	fmt.Println("math.sqrt: ", math.Sqrt(x))
 }
