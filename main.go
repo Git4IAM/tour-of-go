@@ -29,8 +29,19 @@ func Sqrt(x float64) float64 {
 	return z
 }
 
+type Vertex struct {
+	X, Y int
+}
+
+var (
+	v1       = Vertex{1, 2}
+	v2       = Vertex{X: 1}
+	v3       = Vertex{}
+	literals = &Vertex{1, 2}
+)
+
 func main() {
-	/*myvar1 := 39
+	myvar1 := 39
 	myvar2 := "GeeksforGeeks"
 	myvar3 := 34.67
 
@@ -44,7 +55,7 @@ func main() {
 	fmt.Println(pi)
 
 	const Kind = 48
-	fmt.Printf("Type of Kind is: %T ", Kind)*/
+	fmt.Printf("Type of Kind is: %T ", Kind)
 
 	fmt.Println(
 		pow(3, 2, 10),
@@ -99,4 +110,11 @@ func main() {
 	p = &j         //pointer to j
 	*p = *p / 37   //divide j through the pointer
 	fmt.Println(j) //see new value of j
+
+	v := Vertex{1, 2}
+	v.X = 4 //get field of struct
+	fmt.Println(v.X)
+	fmt.Println(Vertex{1, 2})
+
+	fmt.Println(v1, literals, v2, v3)
 }
