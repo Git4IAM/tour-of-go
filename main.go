@@ -88,4 +88,15 @@ func main() {
 	default:
 		fmt.Println("Good Evening!")
 	}
+
+	i, j := 42, 2701
+
+	p := &i         //p point to i
+	fmt.Println(*p) //read i through pointer
+	*p = 21         //set i through the pointer
+	fmt.Println(i)  //see the new value of i
+
+	p = &j         //pointer to j
+	*p = *p / 37   //divide j through the pointer
+	fmt.Println(j) //see new value of j
 }
