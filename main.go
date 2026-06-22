@@ -117,4 +117,15 @@ func main() {
 	fmt.Println(Vertex{1, 2})
 
 	fmt.Println(v1, literals, v2, v3)
+
+	var arr [10]string
+	arr[0] = "sakurazaka"
+	arr[1] = "hinatazaka"
+	arr[2] = "nogizaka"
+
+	fmt.Println(arr[2], arr[0])
+	fmt.Println(arr)
+
+	primes := [6]int{2, 3, 5, 7, 11, 13}
+	fmt.Println(primes)
 }
