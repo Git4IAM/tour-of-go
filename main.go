@@ -118,7 +118,7 @@ func main() {
 
 	fmt.Println(v1, literals, v2, v3)
 
-	var arr [10]string
+	var arr [10]string //array
 	arr[0] = "sakurazaka"
 	arr[1] = "hinatazaka"
 	arr[2] = "nogizaka"
@@ -127,5 +127,8 @@ func main() {
 	fmt.Println(arr)
 
 	primes := [6]int{2, 3, 5, 7, 11, 13}
+
+	var slice []int = primes[1 : 4+1] //slices [0, 1, 2, 3, 4, 5]
 	fmt.Println(primes)
+	fmt.Println(slice)
 }
