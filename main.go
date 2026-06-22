@@ -131,4 +131,20 @@ func main() {
 	var slice []int = primes[1 : 4+1] //slices [0, 1, 2, 3, 4, 5]
 	fmt.Println(primes)
 	fmt.Println(slice)
+
+	names := [4]string{
+		"Hikaru",
+		"Karin",
+		"Ten",
+		"Honosu",
+	}
+	fmt.Println(names)
+
+	a := names[0:2]
+	b := names[2:4]
+	fmt.Println(a, b)
+
+	b[0] = "SpeedStar" // changes in slice, array change too.
+	fmt.Println(a, b)
+	fmt.Println(names)
 }
