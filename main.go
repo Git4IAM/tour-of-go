@@ -40,6 +40,10 @@ var (
 	literals = &Vertex{1, 2}
 )
 
+func printSlice(slc []int) {
+	fmt.Printf("len=%d cap=%d %v\n", len(slc), cap(slc), slc)
+}
+
 func main() {
 	myvar1 := 39
 	myvar2 := "GeeksforGeeks"
@@ -147,4 +151,35 @@ func main() {
 	b[0] = "SpeedStar" // changes in slice, array change too.
 	fmt.Println(a, b)
 	fmt.Println(names)
+
+	q := []int{2, 3, 5, 7, 11, 13} //slice not declair number of size
+	fmt.Println(q)
+
+	r := []bool{true, false, true, true, false, true}
+	fmt.Println(r)
+
+	s := []struct {
+		i int
+		b bool
+	}{
+		{2, true},
+		{3, false},
+		{5, true},
+		{7, true},
+		{11, false},
+		{13, true},
+	}
+	fmt.Println(s)
+
+	slc := []int{2, 3, 5, 7, 11, 13}
+	printSlice(slc)
+
+	slc = slc[:0] //Slice the slice to give it to zero length
+	printSlice(slc)
+
+	slc = slc[:4] //Extend its length
+	printSlice(slc)
+
+	slc = slc[2:] // Drop its first two values
+	printSlice(slc)
 }
