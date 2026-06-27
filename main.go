@@ -182,4 +182,10 @@ func main() {
 
 	slc = slc[2:] // Drop its first two values
 	printSlice(slc)
+
+	var k []int
+	fmt.Println(k, len(k), cap(k))
+	if k == nil {
+		fmt.Println("Nil!")
+	}
 }
